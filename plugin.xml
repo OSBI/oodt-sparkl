@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin title="oodtlibrary" loader="DEFAULT">
+<overlays>
+		<overlay id="startup.oodtlibrary" resourcebundle="content/oodtlibrary/resources/lang/messages">
+			<menubar id="toolsmenu">
+	        	<menuitem id="oodtlibrary" label="${Launcher.oodtlibrary}" command="mantleXulHandler.openUrl('${Launcher.oodtlibrary}','${Launcher.oodtlibrary_TOOLTIP}','plugin/oodtlibrary/api/default')"/>
+	      	</menubar>
+	    </overlay>
+	</overlays>
+	<lifecycle-listener class="pt.webdetails.cpk.CpkLifecycleListener"/>
+	<static-paths>
+		<static-path url="/oodtlibrary/static" localFolder="static"/>
+		<static-path url="/oodtlibrary/resources" localFolder="resources"/>
+	</static-paths>
+	<content-types>
+		<content-type>
+			<title>Oodtlibrary</title>
+			<description></description>
+			<company name="" url="" logo="@PLUGIN_COMPANY_LOGO@"></company>
+		</content-type>
+	</content-types>
+	<content-generator
+		id="oodtlibrary"
+		title="Oodtlibrary"
+		type="oodtlibrary"
+		class="pt.webdetails.cpk.CpkContentGenerator"/>
+	<!-- Menu entry -->
+	<menu-items>
+		<!--<menu-item id="oodtlibrary_main" anchor="tools-submenu" label="Oodtlibrary" command="content/oodtlibrary/" type="MENU_ITEM" how="LAST_CHILD"/>-->
+	</menu-items>
+</plugin>
